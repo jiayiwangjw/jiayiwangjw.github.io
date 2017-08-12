@@ -81,6 +81,8 @@ The C5.0 decision tree algorithm
    
     $${Entropy(S)} = \sum\_{i=1}^{c}-{p\_i log\_2(p\_i)}$$
 
+    $$I = \int \rho R^{2} dV$$
+    
 **For a given segment of data (S), the term `c` refers to the number of
 class levels and `Pi` refers to the proportion of values falling into
 class level `i`. For example, suppose we have a partition of data with
