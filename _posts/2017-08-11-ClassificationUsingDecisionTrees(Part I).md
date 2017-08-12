@@ -4,7 +4,7 @@ title:      Understanding decision trees
 subtitle:   Part I
 date:       2017-08-11
 author:     Jiayi
-header-img: img/decisiontree/nyc.jpg
+header-img: img/decisiontree/nyc2.jpg
 catalog: true
 tags:
     - R
@@ -78,6 +78,7 @@ The C5.0 decision tree algorithm
     entropy ranges from 0 to log2(n). In each case, the minimum value
     indicates that the sample is completely homogenous, while the
     maximum value indicates that the data are as diverse as possible.
+   
     $${Entropy(S)} = \\sum\_{i=1}^{c}-{p\_i log\_2(p\_i)}$$
 
 **For a given segment of data (S), the term `c` refers to the number of
