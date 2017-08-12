@@ -11,20 +11,17 @@ tags:
     - DecisionTree
 ---
 
-Understanding decision trees
-----------------------------
+**Recursive partitioning**:also known as **divide and conquer** because it splits the data into subsets, which are then split repeatedly into even smaller subsets, and so on and so forth until the process stops when the algorithm determines the data within the subsets are sufficiently homogenous, or another stopping criterion has been met.
 
-#### **Recursive partitioning**:also known as **divide and conquer** because it splits the data into subsets, which are then split repeatedly into even smaller subsets, and so on and so forth until the process stops when the algorithm determines the data within the subsets are sufficiently homogenous, or another stopping criterion has been met.
-
-#### Divide and conquer might stop at a node in a case that:
+Divide and conquer might stop at a node in a case that:
 
 -   All (or nearly all) of the examples at the node have the same class
 -   There are no remaining features to distinguish among the examples
 -   The tree has grown to a predefined size limit
 
-### A case example
+## A case example of divide and conquer
 
-#### Decide to develop a decision tree algorithm to predict whether a potential movie would fall into one of three categories: `Critical Success`, `Mainstream Hit`, or `Box Office Bust`.
+Decide to develop a decision tree algorithm to predict whether a potential movie would fall into one of three categories: `Critical Success`, `Mainstream Hit`, or `Box Office Bust`.
 
 1.  produce a scatterplot to illustrate the pattern:
 
@@ -42,7 +39,7 @@ we can make another split between movies with and without a high budget:
 
 ![png](/img/decisiontree/studio3.png)
 
-#### We have partitioned the data into three groups.
+We have partitioned the data into three groups.
 
 -   The group at the top-left corner of the diagram is composed entirely
     of critically acclaimed films. This group is distinguished by a high
@@ -56,7 +53,8 @@ we can make another split between movies with and without a high budget:
 than 80 percent of the examples in each group are from a single class.
 This forms the basis of our stopping criterion.**
 
-#### A simple tree
+## The C5.0 decision tree algorithm
+A simple tree
 
 ![png](/img/decisiontree/studio4.png)
 
@@ -94,7 +92,7 @@ the entropy as follows:**
     # Examine the entropy for all the possible two-class arrangements
     curve(-x * log2(x) - (1 - x) * log2(1 - x), col = "red", xlab = "x", ylab = "Entropy", lwd = 4)
 
-![](MLwithR.5a.Classification_Using_Decision_Trees_files/figure-markdown_strict/unnamed-chunk-1-1.png)
+![png](/img/decisiontree/unnamed-chunk-1-1.png)
 
 -   A 50-50 split results in maximum entropy. As one class increasingly
     dominates the other, the entropy reduces to zero
@@ -126,29 +124,30 @@ Pruning the decision tree
 The process of pruning a decision tree involves reducing its size such
 that it generalizes better to unseen data.
 
-#### Two Solutions:
+### Two Solutions:
 
--   **Early stopping** or **pre-pruning the decision tree**: stop the
-    tree from growing once it reaches a certain number of decisions or
+####   **Early stopping** or **pre-pruning the decision tree**:
+    stop the tree from growing once it reaches a certain number of decisions or
     when the decision nodes contain only a small number of examples.
     (But there is no way to know whether the tree will miss subtle, but
     important patterns that it would have learned had it grown to a
     larger size.)
--   **Post-pruning** involves growing a tree that is intentionally too
+####   **Post-pruning** 
+    involves growing a tree that is intentionally too
     large and pruning leaf nodes to reduce the size of the tree to a
     more appropriate level
 
-Example - identifying risky bank loans using C5.0 decision trees
+#### Example - identifying risky bank loans using C5.0 decision trees
 ----------------------------------------------------------------
 
-### Step 1 - collecting data
+#### Step 1 - collecting data
 
 The credit dataset includes 1,000 examples on loans, plus a set of
 numeric and nominal features indicating the characteristics of the loan
 and the loan applicant. A class variable indicates whether the loan went
 into default
 
-### Step 2 - exploring and preparing the data
+#### Step 2 - exploring and preparing the data
 
 Ignore the stringsAsFactors option as the majority of the features in
 the data are nominal:
@@ -213,11 +212,11 @@ the data are nominal:
     will identify applicants that are at high risk to default, allowing
     the bank to refuse credit requests.
 
-### Data preparation - creating random training and test datasets
+Data preparation - creating random training and test datasets
 
-#### The credit dataset is not randomly ordered, making the prior approach unwise. Suppose that the bank had sorted the data by the loan amount, with the largest loans at the end of the file. If we used the first 90 percent for training and the remaining 10 percent for testing, we would be training a model on only the small loans and testing the model on the big loans.
+The credit dataset is not randomly ordered, making the prior approach unwise. Suppose that the bank had sorted the data by the loan amount, with the largest loans at the end of the file. If we used the first 90 percent for training and the remaining 10 percent for testing, we would be training a model on only the small loans and testing the model on the big loans.
 
-#### We'll solve this problem by using a random sample of the credit data for training.
+We'll solve this problem by using a random sample of the credit data for training.
 
     set.seed(123)
     train_sample <- sample(1000,900)
@@ -243,7 +242,7 @@ the data are nominal:
     ##   no  yes 
     ## 0.67 0.33
 
-### Step 3 - training a model on the data
+#### Step 3 - training a model on the data
 
     library(C50)
 
@@ -435,7 +434,7 @@ the data are nominal:
 -   And the credit history is perfect or very good, then classify as
     "likely to default."
 
-#### The confusion matrix is a cross-tabulation that indicates the model's incorrectly classified records in the training data:
+The confusion matrix is a cross-tabulation that indicates the model's incorrectly classified records in the training data:
 
 -   The model correctly classified all but 133 of the 900 training
     instances for an error rate of 14.8 percent.
@@ -444,7 +443,7 @@ the data are nominal:
     (false negatives).
 -   The error rate reported on training data may be overly optimistic
 
-### Step 4 - evaluating model performance
+#### Step 4 - evaluating model performance
 
 Create a vector of predicted class values, which we can compare to the
 actual class values using the `CrossTable()` function in the `gmodels`
@@ -498,9 +497,9 @@ total number of records:
     this type of error is a potentially very costly mistake, as the bank
     loses money on each default.
 
-### Step 5 - improving model performance
+#### Step 5 - improving model performance
 
-#### Boosting the accuracy of decision trees
+### Boosting the accuracy of decision trees
 
 Add an additional trials parameter indicating the number of separate
 decision trees to use in the boosted team. The trials parameter sets an
@@ -1575,11 +1574,11 @@ additional trials do not seem to be improving the accuracy.
 -   The model is still not doing well at predicting defaults, predicting
     only 20/33 = 61% correctly.
 
-### Making mistakes more costlier than others
+#### Making mistakes more costlier than others
 
-#### Assign a penalty to different types of errors, in order to discourage a tree from making more costly mistakes. The penalties are designated in a **cost matrix**, which specifies how much costlier each error is, relative to any other prediction.
+Assign a penalty to different types of errors, in order to discourage a tree from making more costly mistakes. The penalties are designated in a **cost matrix**, which specifies how much costlier each error is, relative to any other prediction.
 
-#### Specify the dimensions
+- Specify the dimensions
 
     matrix_dimensions <- list(c("no", "yes"), c("no", "yes"))
     names(matrix_dimensions) <- c("predicted", "actual")
@@ -1591,7 +1590,7 @@ additional trials do not seem to be improving the accuracy.
     ## $actual
     ## [1] "no"  "yes"
 
-#### Assign the penalty for the various types of errors by supplying four values to fill the matrix.
+- Assign the penalty for the various types of errors by supplying four values to fill the matrix.
 
     error_cost <- matrix(c(0, 1, 4, 0), nrow = 2, dimnames = matrix_dimensions)
     error_cost
@@ -1601,7 +1600,7 @@ additional trials do not seem to be improving the accuracy.
     ##       no   0   4
     ##       yes  1   0
 
-#### A false negative has a cost of 4 versus a false positive's cost of 1.
+- A false negative has a cost of 4 versus a false positive's cost of 1.
 
     credit_cost <- C5.0(credit_train[-17], credit_train$default, costs = error_cost)
     credit_cost_pred <- predict(credit_cost, credit_test)
