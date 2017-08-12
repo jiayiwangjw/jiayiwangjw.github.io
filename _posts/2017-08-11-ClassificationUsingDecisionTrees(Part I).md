@@ -28,19 +28,19 @@ Understanding decision trees
 
 1.  produce a scatterplot to illustrate the pattern:
 
-![png](img/decisiontree/studio1.png)
+![png](/img/decisiontree/studio1.png)
 
 2a. Using the divide and conquer strategy, we can build a simple
 decision tree. To create the tree's root node, we split the feature
 indicating the number of celebrities, partitioning the movies into
 groups with and without a significant number of A-list stars:
 
-![studio2](img/decisiontree/studio2.png)
+![png](/img/decisiontree/studio2.png)
 
 2b. Next, among the group of movies with a larger number of celebrities,
 we can make another split between movies with and without a high budget:
 
-![studio3](studio3.png)
+![png](/img/decisiontree/studio3.png)
 
 #### We have partitioned the data into three groups.
 
@@ -58,7 +58,7 @@ This forms the basis of our stopping criterion.**
 
 #### A simple tree
 
-![studio4](studio4.png)
+![png](/img/decisiontree/studio4.png)
 
 The C5.0 decision tree algorithm
 --------------------------------
