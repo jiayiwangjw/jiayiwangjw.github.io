@@ -4,7 +4,7 @@ title:      Understanding decision trees
 subtitle:   Part I
 date:       2017-08-11
 author:     Jiayi
-header-img: img/decisiontree/nyc.png
+header-img: img/decisiontree/nyc.jpg
 catalog: true
 tags:
     - R
@@ -28,7 +28,7 @@ Understanding decision trees
 
 1.  produce a scatterplot to illustrate the pattern:
 
-![studio1](studio1.png)
+![png](img/decisiontree/studio1.png)
 
 2a. Using the divide and conquer strategy, we can build a simple
 decision tree. To create the tree's root node, we split the feature
