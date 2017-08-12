@@ -34,6 +34,7 @@ groups with and without a significant number of A-list stars:
 
 ![png](/img/decisiontree/studio2.png)
 
+
 2b. Next, among the group of movies with a larger number of celebrities,
 we can make another split between movies with and without a high budget:
 
