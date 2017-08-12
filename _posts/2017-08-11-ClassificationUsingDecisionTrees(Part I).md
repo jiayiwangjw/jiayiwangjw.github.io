@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      Understanding decision trees
+subtitle:   Part I
+date:       2017-08-11
+author:     Jiayi
+header-img: img/decisiontree/nyc.png
+catalog: true
+tags:
+    - R
+    - DecisionTree
+---
+
 Understanding decision trees
 ----------------------------
 
@@ -22,7 +35,7 @@ decision tree. To create the tree's root node, we split the feature
 indicating the number of celebrities, partitioning the movies into
 groups with and without a significant number of A-list stars:
 
-![studio2](studio2.png)
+![studio2](img/decisiontree/studio2.png)
 
 2b. Next, among the group of movies with a larger number of celebrities,
 we can make another split between movies with and without a high budget:
