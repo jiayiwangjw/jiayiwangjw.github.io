@@ -79,7 +79,7 @@ The C5.0 decision tree algorithm
     indicates that the sample is completely homogenous, while the
     maximum value indicates that the data are as diverse as possible.
    
-    $${Entropy(S)} = \\sum\_{i=1}^{c}-{p\_i log\_2(p\_i)}$$
+    $${Entropy(S)} = \sum\_{i=1}^{c}-{p\_i log\_2(p\_i)}$$
 
 **For a given segment of data (S), the term `c` refers to the number of
 class levels and `Pi` refers to the proportion of values falling into
