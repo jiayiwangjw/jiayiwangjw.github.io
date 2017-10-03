@@ -14,8 +14,7 @@ tags:
 
 ### Forward propagation
 
-![ForwardPropagation](img\ForwardPropagation.png)
-
+![png](/img/dp/ForwardPropagation.png)
 
 ```python
 import numpy as np
@@ -41,8 +40,7 @@ print(output)
 
 An "activation function" is a function applied at each node. It converts the node's input into some output.
 
-![ActivationFunctions](img\ActivationFunctions.png)
-
+![png](/img/dp/ActivationFunctions.png)
 
 ```python
 import numpy as np
@@ -69,8 +67,8 @@ print(output)
     [ 0.9999092   0.76159416]
     1.23822425257
     
+![png](/img/dp/ReLU.png)
 
-![Rectified Linear Activation](img\ReLU.png)
 
 The **rectified linear activation function (called ReLU)** has been shown to lead to very high-performance networks. This function takes a single number as an input, returning 0 if the input is negative, and the input if the input is positive.
 
@@ -162,7 +160,7 @@ print(results)
 
 ### Multi-layer neural networks
 
-![Multiple hidden layers](img\Multiple hidden layers.png)
+![png](/img/dp/Multiple hidden layers.png)
 
 
 ```python
@@ -221,7 +219,7 @@ print(output)
 
 ### How weight changes affect accuracy
 
-![Weight Change](img\weightchange.png)
+![png](/img/dp/weightchange.png)
 
 
 ```python
