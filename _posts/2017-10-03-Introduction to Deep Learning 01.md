@@ -1,4 +1,15 @@
-
+---
+layout:     post
+title:      Introduction to Deep Learnin
+subtitle:   01 Basics
+date:       2017-10-03
+author:     Jiayi
+header-img: img/decisiontree/nyc2.jpg
+catalog: true
+tags:
+    - R
+    - DecisionTree
+---
 ## 01 Basics
 
 ### Forward propagation
