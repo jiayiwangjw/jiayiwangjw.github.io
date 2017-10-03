@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Introduction to Deep Learnin
+title:      Introduction to Deep Learning
 subtitle:   01 Basics
 date:       2017-10-03
 author:     Jiayi
