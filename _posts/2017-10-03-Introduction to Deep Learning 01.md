@@ -13,7 +13,7 @@ tags:
 
 
 
-## 01 Basics
+# 01 Basics
 
 ### Forward propagation
 
@@ -218,7 +218,7 @@ print(output)
     364
     
 
-## 02 Opitimization
+# 02 Opitimization
 
 ### How weight changes affect accuracy
 
