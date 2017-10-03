@@ -1,0 +1,14 @@
+---
+layout:     post
+title:      Deep Learning 01
+subtitle:   Part I
+date:       2017-10-03
+author:     Jiayi
+header-img: img/decisiontree/nyc2.jpg
+catalog: true
+tags:
+    - R
+    - DecisionTree
+---
+
+**Recursive partitioning**:also known as **divide and conquer** because it splits the data into subsets, which are then split repeatedly into even sma
