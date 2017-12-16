@@ -1,3 +1,15 @@
+---
+layout:     post
+title:      Linear Regression
+subtitle:   Loss Function & Gradient Descent
+date:       2017-12-16
+author:     Jiayi
+header-img: img/post-bg-ios10.jpg
+catalog: true
+tags:
+    - Python
+    - Regression
+---
 
 Linear regression is a method used to find a relationship between a dependent variable and a set of independent variables. In its simplest form it consist of fitting a function $ \boldsymbol{y} = w.\boldsymbol{x}+b $ to observed data, where $\boldsymbol{y}$ is the dependent variable, $\boldsymbol{x}$ the independent, $w$ the weight matrix and $b$ the bias.
 
