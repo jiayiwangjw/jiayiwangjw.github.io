@@ -13,13 +13,13 @@ tags:
 
 Linear regression is a method used to find a relationship between a dependent variable and a set of independent variables. In its simplest form it consist of fitting a function $ \boldsymbol{y} = w.\boldsymbol{x}+b $ to observed data, where $\boldsymbol{y}$ is the dependent variable, $\boldsymbol{x}$ the independent, $w$ the weight matrix and $b$ the bias.
 
-![](linearregression.png)
+![png](/img/LinearRegression/linearregression.png)
 
 ### The goal is to find a best function by utilizing gradient descent to minimize the loss function
 
 Given a function defined by a set of parameters, gradient descent starts with an initial set of parameter values and iteratively moves toward a set of parameter values that minimize the function. This iterative minimization is achieved using calculus, taking steps in the negative direction of the function gradient.
 
-![](best function.png)
+![png](/img/LinearRegression/best function.png)
 
 
 ```python
@@ -38,7 +38,7 @@ y_data = [640., 633., 619., 393., 428., 27., 193., 66., 226., 1591.]
 
 Loss Function: the sum of square of the difference between predicted output and actual output. It is a way to map the performance of our model into a real number. It measures how well the model is performing its task, be it a linear regression model fitting the data to a line, a neural network correctly classifying an image of a character, etc. The loss function is particularly important in learning since it is what guides the update of the parameters so that the model can perform better.
 
-![](lossfunction.png)
+![png](/img/LinearRegression/lossfunction.png)
 
 
 ```python
@@ -57,7 +57,7 @@ for i in range(len(x)):
         Z[j][i] = Z[j][i]/len(x_data)    
 ```
 
-![](gradient descent1.png)
+![png](/img/LinearRegression/gradient descent1.png)
 
 
 ```python
@@ -104,7 +104,7 @@ plt.show()
 ```
 
 
-![png](output_11_0.png)
+![png](/img/LinearRegression/output_11_0.png)
 
 
 define a new learning rate = 1, define a new learning rate, and update parameter
@@ -162,7 +162,7 @@ plt.show()
 ```
 
 
-![png](output_13_0.png)
+![png](/img/LinearRegression/output_13_0.png)
 
 
 
