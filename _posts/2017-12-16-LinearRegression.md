@@ -13,7 +13,7 @@ tags:
 
 Linear regression is a method used to find a relationship between a dependent variable and a set of independent variables. In its simplest form it consist of fitting a function $ \boldsymbol{y} = w.\boldsymbol{x}+b $ to observed data, where $\boldsymbol{y}$ is the dependent variable, $\boldsymbol{x}$ the independent, $w$ the weight matrix and $b$ the bias.
 
-![](/img/LinearRegression/linearregression.png)
+![png](/img/LinearRegression/linearregression.png)
 
 ### The goal is to find a best function by utilizing gradient descent to minimize the loss function
 
