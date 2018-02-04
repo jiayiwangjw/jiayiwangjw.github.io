@@ -15,6 +15,7 @@ Blockchain technology is designed in order to eliminate the barriers of trust. I
 
 
 ##Blockchain 1.0##
+
 Blockchain involves peer to peer network, distributed storage, cryptography, game theory and other cross-cutting technologies.
 The first application of Blockchain - Bitcoin, the first digital currency to solve the double spending problem without requiring a trusted authority -  is called Blockchain 1.0, it has the following characteristics:
 1. Bitcoin is an open distributed ledger
@@ -31,19 +32,22 @@ All those who want to record transaction must calculate a math problem. Based on
 Because transaction recording is a global race for all miners, the premise of successful cheating is that cheater controls the 51% mining power (i.e. computing power) more than all other miners.
 
 Blockchain 2.0 
+
 Blockchain 2.0 is a combination of digital currency and smart contracts. The application is Ethereum which is more than just a cryptocurrency for trading: its real value is to make people to use distribution computers supported by thousands of nodes globally.
 
 Smart contract
 Ethereum needs thousands of people to run software on their computers to support the entire network. Each node (computer) in the network runs the Ethereum Virtual Machine (EVM). Imagine EVM as an operating system, and the software or application executed by EVM is called a "Smart Contract." Smart contract can be partially or fully executed or enforced without human interaction (i.e. automated escrow).  A Blockchain smart contract would be enabled by extensible programming instructions that define and execute an agreement.
 
-For example, suppose you and I bet today`s Super Bowl. I bet Eagles wins 2018 Super Bowl, but you bet Patriots wins. We agree that the loser must pay $100 to the winner. We may write a contract on Ethereum that will receive $100 from both of us. By the end of the game we will know who is the champion of Super Bowl through an open API in NBC, and the smart contract will send $200 to the winning party.
+For example, suppose you and I bet Super Bowl. I bet Eagles wins 2018 Super Bowl, but you bet Patriots wins. We agree that the loser must pay $100 to the winner. We may write a contract on Ethereum that will receive $100 from both of us. By the end of the game we will know who is the champion of Super Bowl through an open API in NBC, and the smart contract will send $200 to the winning party.
 
 If a user wants to use and execute a smart contract, he or she must pay the execution fee, which may be calculated based on the nodes that actually spend resources such as memory, storage, computing power to execute the contract. Each statement in the contract has a fee. For example, if the statement executed uses the memory of the node, this statement will have a price. If you execute a statement using the node's hard disk storage, these statements are also priced.
 
 Summary:
+
 Although there are still many places where the underlying technologies should be improved, the platforms of Blockchain are semi-mature and can be commercially launched in the near future. The commercialization is the biggest challenge.
 
 Obstacles:
+
 1. Too few types of consensus mechanisms (proof of work, proof of stake, etc) to meet diversified business scenarios
 2. Scalability: Small capacity of distributed storage block, leading to network congestion. It is unable to meet data volume requirements in banks, stock exchanges. As of late 2016, Blockchain can only process about seven transactions per second, and each transaction costs about $0.20 and can only store 80 bytes of data.
 3 Network size:  This requires a large network of users, however. If a Blockchain is not a robust network with a widely distributed grid of nodes, it becomes more difficult to reap the full benefit.
@@ -52,6 +56,7 @@ Obstacles:
 Read more challenges in Forbes
 
 Opportunities:
+
 Is Blockchain 3.0 just around the corner? It is expected to address a) the underlying ecosystem of the entire platform, b) the common application of Blockchain, as well as c) the applications in various vertical industries.
 
 a. The underlying ecosystem
