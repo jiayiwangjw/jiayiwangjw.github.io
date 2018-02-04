@@ -4,7 +4,7 @@ title:      What is Blockchain
 subtitle:   Is Blockchain application just around the corner?
 date:       2018-02-04
 author:     Jiayi
-header-img: img/post-bg-ios10.jpg
+header-img: img/blockchain.jpg
 catalog: true
 tags:
     - BlockChain
