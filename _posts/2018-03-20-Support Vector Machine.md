@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      SVM
+subtitle:   Support Vector Machine
+date:       2018-03-20
+author:     Jiayi
+header-img: img/post-bg-ios10.jpg
+catalog: true
+tags:
+    - Python
+    - SVM
+---
+
 
 ## 1. SVM支持向量机：
 The princile of SVM is to find out hyper plan between two classes of datasets.
