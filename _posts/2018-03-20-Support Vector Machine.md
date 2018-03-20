@@ -1,31 +1,20 @@
 
 ## 1. SVM支持向量机：
-SVM的原理是寻找两类数据之间的分隔线（超平面hyper plane）
-![](SVM01.png)
+The princile of SVM is to find out hyper plan between two classes of datasets.
+![png](/img/svm/SVM01.png)
 
-这条线做了什么其他线未做的? 它最大化了到最近点的距离（间距最大化） 并且它对涉及的两个分类均最大化了此类距离
+What this line does that the other ones don't do? It maximizes the distance to the nearest point, and it does this relative to both classes.
 
-这是一条在每个分类里均最大化了到最近点的距离的线. 而这个距离通常被称之为**余量**
+It's a line that maximizes the distance to the nearest points in either class, that distance is often called **margin**. The margin is the distance between the line and the nearest point of either of the two classes.
+![png](/img/svm/SVM02.png)
 
-余量就是线与两个分类中最近点的距离. 为什么选中间这条线呢而不是选靠近红色或蓝色的垂直线？
+Two key points:
+1. SVM always consider whether the classification is correct or not, rather than maximizing the distance between datasets.
+2. SVM maximizes the robustness of the classification.
+3. SVM looks for the decision boundry that maxmizes the distance of two datasets, meanwhile tolerates specific outliner by parameter tuning.
+![png](/img/svm/SVM03.png)
+![png](/img/svm/SVM04.png)
 
-蓝色数据集的差数确实很大，但红色那边的差数很小。所以 它并没有真的将两个数据集的差数最大化 而仅仅将其中的一个最大化了。
-我们之所以选择中间的这个数据集，是因为它看起来最不容易出现分类误差
-
-所以支持向量机的内部原理是最大限度第提升结果的稳健性（robustness)
-
-What this line does that the other ones don't do, it maximizes the distance to the nearest point, and it does this relative to both classes.
-
-It's a line that maximizes the distance to the nearest points in either class, that distance is often called **margin**. The word margin is the thing that is being maximized.
-
-The margin is the distance between the line and the nearest point of either of the two classes.
-![](SVM02.png)
-
-SVM 总是先考虑分类正确与否，再考虑数据集间隔最大化
-![](SVM03.png)
-
-找个决策边界使两个数据集间隔最大，同时容忍个别异常值（通过餐数值调整）
-![](SVM04.png)
 
 ## 2. SVM in SKLEARN
 
