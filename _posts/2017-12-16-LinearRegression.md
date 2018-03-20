@@ -19,7 +19,7 @@ Linear regression is a method used to find a relationship between a dependent va
 
 Given a function defined by a set of parameters, gradient descent starts with an initial set of parameter values and iteratively moves toward a set of parameter values that minimize the function. This iterative minimization is achieved using calculus, taking steps in the negative direction of the function gradient.
 
-![png](/img/LinearRegression/best function.png)
+![png](/img/LinearRegression/bestfunction.png)
 
 
 ```python
@@ -57,7 +57,7 @@ for i in range(len(x)):
         Z[j][i] = Z[j][i]/len(x_data)    
 ```
 
-![png](/img/LinearRegression/gradient descent1.png)
+![png](/img/LinearRegression/gradientdescent1.png)
 
 
 ```python
