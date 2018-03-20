@@ -14,19 +14,19 @@ tags:
 
 ## 1. SVM支持向量机：
 The princile of SVM is to find out hyper plan between two classes of datasets.
-![png](/img/svm/SVM01.png)
+![png](/img/SVM/SVM01.png)
 
 What this line does that the other ones don't do? It maximizes the distance to the nearest point, and it does this relative to both classes.
 
 It's a line that maximizes the distance to the nearest points in either class, that distance is often called **margin**. The margin is the distance between the line and the nearest point of either of the two classes.
-![png](/img/svm/SVM02.png)
+![png](/img/SVM/SVM02.png)
 
 Two key points:
 1. SVM always consider whether the classification is correct or not, rather than maximizing the distance between datasets.
 2. SVM maximizes the robustness of the classification.
 3. SVM looks for the decision boundry that maxmizes the distance of two datasets, meanwhile tolerates specific outliner by parameter tuning.
-![png](/img/svm/SVM03.png)
-![png](/img/svm/SVM04.png)
+![png](/img/SVM/SVM03.png)
+![png](/img/SVM/SVM04.png)
 
 
 ## 2. SVM in SKLEARN
