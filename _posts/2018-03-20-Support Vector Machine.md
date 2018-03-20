@@ -26,7 +26,7 @@ It's a line that maximizes the distance to the nearest points in either class, t
 Two key points:
 1. SVM always consider whether the classification is correct or not, rather than maximizing the distance between datasets.
 2. SVM maximizes the robustness of the classification.
-3. SVM looks for the decision boundry that maxmizes the distance of two datasets, meanwhile tolerates specific outliner by parameter tuning.
+3. SVM looks for the decision surface that maxmizes the distance of two datasets, meanwhile tolerates specific outliner by parameter tuning.
 
 
 
