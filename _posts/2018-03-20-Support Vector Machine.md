@@ -342,4 +342,4 @@ ax.scatter(clf.support_vectors_[:, 0], clf.support_vectors_[:, 1], s=100,
 plt.show()
 ```
 
-![png](/img/SVM/SVM09.png)
+![png](/img/SVM/SVM10.png)
