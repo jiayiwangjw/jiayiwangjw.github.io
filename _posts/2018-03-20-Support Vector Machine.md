@@ -14,19 +14,20 @@ tags:
 
 ## 1. SVM支持向量机：
 The princile of SVM is to find out hyper plan between two classes of datasets.
+
 ![png](/img/SVM/SVM01.png)
 
 What this line does that the other ones don't do? It maximizes the distance to the nearest point, and it does this relative to both classes.
 
 It's a line that maximizes the distance to the nearest points in either class, that distance is often called **margin**. The margin is the distance between the line and the nearest point of either of the two classes.
+
 ![png](/img/SVM/SVM02.png)
 
 Two key points:
 1. SVM always consider whether the classification is correct or not, rather than maximizing the distance between datasets.
 2. SVM maximizes the robustness of the classification.
 3. SVM looks for the decision boundry that maxmizes the distance of two datasets, meanwhile tolerates specific outliner by parameter tuning.
-![png](/img/SVM/SVM03.png)
-![png](/img/SVM/SVM04.png)
+
 
 
 ## 2. SVM in SKLEARN
@@ -116,54 +117,23 @@ acc
 
 
 
-
-```python
-pred
-```
-
-
-
-
-    array([ 0.,  1.,  1.,  0.,  1.,  1.,  1.,  0.,  1.,  1.,  1.,  1.,  1.,
-            0.,  0.,  1.,  0.,  1.,  0.,  1.,  0.,  1.,  0.,  1.,  1.,  1.,
-            1.,  1.,  1.,  0.,  1.,  1.,  1.,  1.,  0.,  1.,  1.,  0.,  1.,
-            0.,  1.,  0.,  1.,  1.,  1.,  1.,  1.,  1.,  0.,  1.,  0.,  1.,
-            0.,  1.,  1.,  0.,  1.,  0.,  1.,  1.,  1.,  1.,  1.,  1.,  0.,
-            1.,  1.,  0.,  1.,  0.,  1.,  1.,  1.,  1.,  1.,  0.,  1.,  0.,
-            1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  0.,  0.,  0.,  1.,  0.,
-            1.,  1.,  1.,  1.,  1.,  1.,  0.,  0.,  1.,  1.,  0.,  0.,  1.,
-            1.,  1.,  1.,  0.,  1.,  1.,  1.,  1.,  0.,  1.,  0.,  1.,  0.,
-            0.,  0.,  0.,  1.,  1.,  0.,  0.,  1.,  1.,  1.,  1.,  0.,  0.,
-            0.,  0.,  1.,  1.,  1.,  0.,  1.,  0.,  1.,  0.,  0.,  0.,  1.,
-            1.,  0.,  1.,  1.,  0.,  1.,  0.,  1.,  1.,  1.,  0.,  0.,  1.,
-            0.,  1.,  0.,  1.,  1.,  1.,  0.,  1.,  1.,  0.,  1.,  1.,  0.,
-            1.,  1.,  1.,  1.,  1.,  0.,  0.,  1.,  1.,  1.,  1.,  1.,  1.,
-            0.,  0.,  0.,  1.,  1.,  1.,  1.,  0.,  1.,  1.,  1.,  1.,  1.,
-            0.,  1.,  0.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  0.,  1.,
-            1.,  1.,  1.,  0.,  1.,  1.,  0.,  0.,  0.,  1.,  0.,  1.,  0.,
-            1.,  1.,  1.,  1.,  0.,  1.,  1.,  0.,  0.,  0.,  1.,  0.,  1.,
-            0.,  1.,  1.,  0.,  1.,  1.,  0.,  0.,  0.,  1.,  1.,  0.,  1.,
-            1.,  1.,  1.])
-
-
-
 ## 3. Non-Linear SVM
 
-Z代表到原点的距离。将数据映射到带有Z的新坐标，会发现蓝圈Z值都大，红圈Z值都小。即新坐标中linearly separable
+Z represents the distance from origin. Mapping dataset to the coordinate which has Z, you will find the blue circle has bigger Z value, red circle has smaller Z value: i.e. linearly separable in the new coordinate.
 
-我们增加了一个特性Z，就能够让SVM学习圆形的非线性决策面
+Therefore, SVM can learn non-linear decision from round by adding Z
 
-![](SVM05.png)
+![png](/img/SVM/SVM05.png)
 
-以下的图形，新增非线性特性|X|可以把红蓝圆圈线性分开
-![](SVM06.png)
+
+![png](/img/SVM/SVM06.png)
 
 ### kernal trick
-但为了避免写一大推新的特征，我们需要使用**kernal trick**: 接受低维度输入空间或特征空间，将其映射到高维度空间。
+To avoid developing a bundle of new features, we use **kernal trick**: accept input or features with lower dimension, mapping them into high dimensions. 
 
 应用核函数将输入空间从xy变换到更大的输入空间后，再使用SVM对数据点分类，得到解后返回原始空间，得到一个非线性分割。
 
-![](SVM07.png)
+![png](/img/SVM/SVM07.png)
 
 ## 4. SVM in SKLEARN
 http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
@@ -220,27 +190,19 @@ acc
 ```
 
 
-
-
     0.92400000000000004
 
 
 
-## 5. 优缺点
-优点： 
-- 适用于有明显分隔边界的复杂数据
+## 5. Pros and Cons
+Pros:
+- suitable for complex dataset with clearly delimited boundaries
 
-缺点： 
-- 不适用于海量数据。训练时间与数据量的三次方成正比。
-- 不使用于数据集噪声过大的情况（类之间的重叠多，且需要将不同类分开，naive bayes更适合）
+Cons 
+- Not suitable massive data: the training time is proportional to the third power of data volume
+- Not suitable to the dataset which has too much noises (naive bayes is more suitable)
 
-## 6. Mini-Project
-
-In this mini-project, we’ll tackle the exact same email author ID problem as the Naive Bayes mini-project, but now with an SVM
-
-#### 6.1 Import, create, train and make predictions with the sklearn SVC classifier. When creating the classifier, use a linear kernel. What is the accuracy of the classifier?
-
-## 7. Further exploration in SVM
+## 6. 
 
 
 ```python
