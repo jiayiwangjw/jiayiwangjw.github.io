@@ -145,7 +145,6 @@ Parameter:
     - 较大值意味着训练样本对距离较近的决策边界有影响
 - C, 在光滑的决策边界，以及尽可能正确分类所有训练点两者之间进行平衡. C值越大，就得到更复杂的决策边界值.
 
-https://classroom.udacity.com/courses/ud120/lessons/2252188570/concepts/33843786680923
 
 
 ```python
