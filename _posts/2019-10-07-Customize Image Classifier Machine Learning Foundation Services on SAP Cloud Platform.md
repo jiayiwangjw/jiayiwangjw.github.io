@@ -1,3 +1,17 @@
+---
+layout:     post
+title:      Customize Image Classifier Machine Learning Foundation Services on SAP Cloud Platform
+subtitle:   A way to retrain the model
+date:       2019-10-07
+author:     Jiayi
+header-img: img/post-bg-ios10.jpg
+catalog: true
+tags:
+    - SAP API
+    - Image Classification
+---
+
+
 
 ## Step 01: Install the Cloud Foundry Command Line Interface (CLI)
 
@@ -12,10 +26,10 @@ open your terminal and input CF
 
 You can find the API Endpoint in "Subaccount - Overview" section in your SCP account.
 
-![](img/0001.png)
+![](img/ImageClassifierSCP/0001.png)
 
 #### Log in using the CLI
-![](img/0003.png)
+![](img/ImageClassifierSCP/0003.png)
 
 
 ```python
