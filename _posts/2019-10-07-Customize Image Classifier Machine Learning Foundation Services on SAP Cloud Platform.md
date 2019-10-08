@@ -20,6 +20,7 @@ You can download it via https://github.com/cloudfoundry/cli#downloads
 #### Test the Cloud Foundry CLI
 
 open your terminal and input CF
+
 ![](/img/ImageClassifierSCP/0002.png)
 
 #### Connect the CLI to the cloud region
@@ -29,6 +30,7 @@ You can find the API Endpoint in "Subaccount - Overview" section in your SCP acc
 ![](/img/ImageClassifierSCP/0001.png)
 
 #### Log in using the CLI
+
 ![](/img/ImageClassifierSCP/0003.png)
 
 
@@ -37,16 +39,19 @@ You can find the API Endpoint in "Subaccount - Overview" section in your SCP acc
 ## Step 02: Install the Machine Learning foundation plugin for SAP Cloud Platform CLI
 
 You can download it here: https://tools.hana.ondemand.com/#mlfoundation
+
 ## Install the plugin
-cf install-plugin -f <extract directory>/sapmlcli
-Verify the plugin is installed properly
-
-![](img/0004.png)
-
 
 ```python
-
+cf install-plugin -f <extract directory>/sapmlcli
+Verify the plugin is installed properly
 ```
+
+![](/img/ImageClassifierSCP/0004.png)
+
+
+
+
 
 ## Step 03: Create service instance and service key
 
