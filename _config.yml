@@ -1,8 +1,9 @@
 # Site settings SEOTitle: 
 title: By Jiayi
+SEOTitle: Jiayi's Blog
 header-img: img/page01.jpg
 email: jiayi0206@me.com
-description: ""
+description: "Jiayi`s blog"
 keyword: "data science, machine learning, python, R"
 url: "https://jiayiwangjw.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -20,10 +21,17 @@ RSS: false
 # weibo_username:     qiubaiying
 # kaggle_username:     potentialwjy
 github_username:    jiayiwangjw
+linkedin_username:  jiayiwangjw
 facebook_username:  potentialwjy
-linkedin_username:   jiayiwangjw
 #twitter_username:   qiubaiying
 
+#weibo_username:     brucezhaor
+#facebook_username:     BruceZhaoR
+#github_username:    jiayiwangjw
+#google_username:  101167914127123982138/posts
+#RSS: feed.xml
+#email: jiayi0206@me.com
+#linkedin: jiayiwangjw
 
 
 
@@ -64,7 +72,10 @@ disqus_username: disqus_jiayi
 # duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 
-
+#---
+#layout:     keynote
+#iframe:     "http://huangxuan.me/js-module-7day/"
+#---
 
 # Analytics settings
 # Baidu Analytics
