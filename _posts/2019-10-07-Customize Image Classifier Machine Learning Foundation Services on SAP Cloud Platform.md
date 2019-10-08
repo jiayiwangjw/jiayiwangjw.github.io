@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Customize Image Classifier Machine Learning Foundation Services on SAP Cloud Platform
-subtitle:   A way to retrain the model
+title:      Customize Image Classifier Machine Learning Foundation Services
+subtitle:   A way to retrain the model on SAP Cloud Platform
 date:       2019-10-07
 author:     Jiayi
 header-img: img/post-bg-ios10.jpg
@@ -13,7 +13,7 @@ tags:
 
 
 
-## Step 01: Install the Cloud Foundry Command Line Interface (CLI)
+### Step 01: Install the Cloud Foundry Command Line Interface (CLI)
 
 You can download it via https://github.com/cloudfoundry/cli#downloads
 
