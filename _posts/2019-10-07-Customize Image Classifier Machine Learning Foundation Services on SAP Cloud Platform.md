@@ -13,7 +13,7 @@ tags:
 
 
 
-### Step 01: Install the Cloud Foundry Command Line Interface (CLI)
+## Step 01: Install the Cloud Foundry Command Line Interface (CLI)
 
 You can download it via https://github.com/cloudfoundry/cli#downloads
 
