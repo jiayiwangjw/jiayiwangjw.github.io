@@ -264,7 +264,7 @@ Now you have all needed
 
 Now we can use image classification API to detect the below picture
 
-![](img/ImageClassifierSCP/394990940_7af082cf8d_n.png)
+![](img/ImageClassifierSCP/394990940_7af082cf8d_n.jpg)
 
 https://mlftrial-image-classifier.cfapps.eu10.hana.ondemand.com/api/v2/image/classification/models/flowers/versions/1
 
