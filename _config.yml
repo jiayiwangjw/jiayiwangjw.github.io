@@ -64,10 +64,10 @@ disqus_username: disqus_jiayi
 # duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 
----
-layout:     keynote
-iframe:     "http://huangxuan.me/js-module-7day/"
----
+#---
+#layout:     keynote
+#iframe:     "http://huangxuan.me/js-module-7day/"
+#---
 
 # Analytics settings
 # Baidu Analytics
