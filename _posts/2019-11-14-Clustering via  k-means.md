@@ -11,9 +11,18 @@ tags:
     - k means
 ---
 
-k_{n+1}
+$$x_1$$
 
-$k_{n+1}$
+$$x_1^2$$
+
+$$x^2_1$$
+
+$$x_{22}^{(n)}$$
+
+$${}^*x^*$$
+
+$$x_{balabala}^{bala}$$
+
 
 ## Clustering via  𝑘 means
 In many applications, the data have no labels but we wish to discover possible labels (or other hidden patterns or structures). This problem is one of unsupervised learning. How can we approach such problems?
