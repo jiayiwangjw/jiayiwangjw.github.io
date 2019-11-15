@@ -12,6 +12,7 @@ tags:
 ---
 
 k_{n+1}
+
 $k_{n+1}$
 
 ## Clustering via  𝑘 means
