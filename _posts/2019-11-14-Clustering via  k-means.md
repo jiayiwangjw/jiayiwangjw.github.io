@@ -1,5 +1,18 @@
+---
+layout:     post
+title:      Clustering via  𝑘 -means
+subtitle:   
+date:       2019-11-14
+author:     Jiayi
+header-img: img/post-bg-ios10.jpg
+catalog: true
+tags:
+    - Clustering
+    - k means
+---
 
-## Clustering via  𝑘 -means
+
+## Clustering via  𝑘 means
 In many applications, the data have no labels but we wish to discover possible labels (or other hidden patterns or structures). This problem is one of unsupervised learning. How can we approach such problems?
 
 **Clustering** is one class of unsupervised learning methods. 
@@ -11,67 +24,9 @@ import os
 import hashlib
 import io
 
-def on_vocareum():
-    return os.path.exists('.voc')
 
-def download(file, local_dir="", url_base=None, checksum=None):
-    local_file = "{}{}".format(local_dir, file)
-    if not os.path.exists(local_file):
-        if url_base is None:
-            url_base = "https://cse6040.gatech.edu/datasets/"
-        url = "{}{}".format(url_base, file)
-        print("Downloading: {} ...".format(url))
-        r = requests.get(url)
-        with open(local_file, 'wb') as f:
-            f.write(r.content)
-            
-    if checksum is not None:
-        with io.open(local_file, 'rb') as f:
-            body = f.read()
-            body_checksum = hashlib.md5(body).hexdigest()
-            assert body_checksum == checksum, \
-                "Downloaded file '{}' has incorrect checksum: '{}' instead of '{}'".format(local_file,
-                                                                                           body_checksum,
-                                                                                           checksum)
-    print("'{}' is ready!".format(file))
-    
-if on_vocareum():
-    URL_BASE = "https://cse6040.gatech.edu/datasets/kmeans/"
-    DATA_PATH = "../resource/asnlib/publicdata/"
-else:
-    URL_BASE = "https://github.com/cse6040/labs-fa17/raw/master/datasets/kmeans/"
-    DATA_PATH = ""
-
-datasets = {'logreg_points_train.csv': '9d1e42f49a719da43113678732491c6d',
-            'centers_initial_testing.npy': '8884b4af540c1d5119e6e8980da43f04',
-            'compute_d2_soln.npy': '980fe348b6cba23cb81ddf703494fb4c',
-            'y_test3.npy': 'df322037ea9c523564a5018ea0a70fbf',
-            'centers_test3_soln.npy': '0c594b28e512a532a2ef4201535868b5',
-            'assign_cluster_labels_S.npy': '37e464f2b79dc1d59f5ec31eaefe4161',
-            'assign_cluster_labels_soln.npy': 'fc0e084ac000f30948946d097ed85ebc'}
-
-for filename, checksum in datasets.items():
-    download(filename, local_dir=DATA_PATH, url_base=URL_BASE, checksum=checksum)
-    
-print("\n(All data appears to be ready.)")
 ```
 
-    Downloading: https://github.com/cse6040/labs-fa17/raw/master/datasets/kmeans/compute_d2_soln.npy ...
-    'compute_d2_soln.npy' is ready!
-    Downloading: https://github.com/cse6040/labs-fa17/raw/master/datasets/kmeans/y_test3.npy ...
-    'y_test3.npy' is ready!
-    Downloading: https://github.com/cse6040/labs-fa17/raw/master/datasets/kmeans/centers_test3_soln.npy ...
-    'centers_test3_soln.npy' is ready!
-    Downloading: https://github.com/cse6040/labs-fa17/raw/master/datasets/kmeans/logreg_points_train.csv ...
-    'logreg_points_train.csv' is ready!
-    Downloading: https://github.com/cse6040/labs-fa17/raw/master/datasets/kmeans/centers_initial_testing.npy ...
-    'centers_initial_testing.npy' is ready!
-    Downloading: https://github.com/cse6040/labs-fa17/raw/master/datasets/kmeans/assign_cluster_labels_S.npy ...
-    'assign_cluster_labels_S.npy' is ready!
-    Downloading: https://github.com/cse6040/labs-fa17/raw/master/datasets/kmeans/assign_cluster_labels_soln.npy ...
-    'assign_cluster_labels_soln.npy' is ready!
-    
-    (All data appears to be ready.)
 
 
 ### The  𝑘 -means clustering criterion
@@ -129,8 +84,6 @@ import matplotlib as mpl
 mpl.rc("savefig", dpi=100) # Adjust for higher-resolution figures
 ```
 
-    /home/nbuser/anaconda3_420/lib/python3.5/site-packages/matplotlib/font_manager.py:281: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
-      'Matplotlib is building the font cache using fc-list. '
 
 
 
@@ -191,7 +144,6 @@ df.head()
 
 
 ```python
-# Helper functions from Logistic Regression Lesson
 def make_scatter_plot(df, x="x_1", y="x_2", hue="label",
                       palette={0: "red", 1: "olive"},
                       size=5,
@@ -262,7 +214,7 @@ make_scatter_plot(df)
 ```
 
 
-![png](output_9_0.png)
+![png](/img/output_9_0.png)
 
 
 Let's extract the data points as a data matrix, `points`, and the labels as a vector, `labels`. Note that the k-means algorithm you will implement should **not** reference `labels` -- that's the solution we will try to predict given only the point coordinates (`points`) and target number of clusters (`k`).
@@ -462,64 +414,6 @@ assert n_matches >= 320
 
 
 
-![png](output_29_1.png)
+![png](/img/output_29_1.png)
 
 
-### Applying k-means to an image.
-
-
-```python
-from PIL import Image
-from matplotlib.pyplot import imshow
-%matplotlib inline
-
-def read_img(path):
-    """
-    Read image and store it as an array, given the image path. 
-    Returns the 3 dimensional image array.
-    """
-    img = Image.open(path)
-    img_arr = np.array(img, dtype='int32')
-    img.close()
-    return img_arr
-
-def display_image(arr):
-    """
-    display the image
-    input : 3 dimensional array
-    """
-    arr = arr.astype(dtype='uint8')
-    img = Image.fromarray(arr, 'RGB')
-    imshow(np.asarray(img))
-    
-
-img_arr = read_img("img/football.png")
-display_image(img_arr)
-print("Shape of the matrix obtained by reading the image")
-print(img_arr.shape)
-```
-
-    Shape of the matrix obtained by reading the image
-    (252, 371, 4)
-
-
-
-![png](output_31_1.png)
-
-
-![]("/img/football.png")
-
-
-```python
-
-```
-
-
-```python
-
-```
-
-
-```python
-
-```
