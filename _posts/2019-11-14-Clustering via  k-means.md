@@ -11,17 +11,7 @@ tags:
     - k means
 ---
 
-$$x_1$$
 
-$$x_1^2$$
-
-$$x^2_1$$
-
-$$x_{22}^{(n)}$$
-
-$${}^*x^*$$
-
-$$x_{balabala}^{bala}$$
 
 
 ## Clustering via  𝑘 means
