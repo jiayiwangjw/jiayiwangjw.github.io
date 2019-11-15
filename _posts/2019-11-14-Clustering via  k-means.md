@@ -144,7 +144,6 @@ df.head()
 
 
 ```python
-# Helper functions from Logistic Regression Lesson
 def make_scatter_plot(df, x="x_1", y="x_2", hue="label",
                       palette={0: "red", 1: "olive"},
                       size=5,
