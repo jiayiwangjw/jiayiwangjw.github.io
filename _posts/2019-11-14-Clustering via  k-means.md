@@ -214,7 +214,7 @@ make_scatter_plot(df)
 ```
 
 
-![png]("img/output_9_0.png")
+![png](/img/output_9_0.png)
 
 
 Let's extract the data points as a data matrix, `points`, and the labels as a vector, `labels`. Note that the k-means algorithm you will implement should **not** reference `labels` -- that's the solution we will try to predict given only the point coordinates (`points`) and target number of clusters (`k`).
@@ -414,6 +414,6 @@ assert n_matches >= 320
 
 
 
-![png]("img/output_29_1.png")
+![png](/img/output_29_1.png)
 
 
