@@ -41,7 +41,7 @@ This notebook has been updated over the past few months.  The prior version was 
 * When testing the model, the test image is normalized by dividing by 255.
 
 ## 1 - Packages 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
+
 
 First, let's run the cell below to import all the packages that you will need during this assignment. 
 - [numpy](www.numpy.org) is the fundamental package for scientific computing with Python.
