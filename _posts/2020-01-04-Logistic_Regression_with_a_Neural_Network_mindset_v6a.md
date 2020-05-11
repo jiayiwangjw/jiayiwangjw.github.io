@@ -654,7 +654,8 @@ print ("predictions = " + str(predict(w, b, X)))
 
 
 
-**What to remember:**
+**What to remember**:
+
 
 You've implemented several functions that:
 - Initialize (w,b)
@@ -914,6 +915,7 @@ print("y = " + str(np.squeeze(my_predicted_image)) + ", your algorithm predicts 
 ```
 
 <font color='blue'>
+
 **What to remember from this assignment:**
 1. Preprocessing the dataset is important.
 2. You implemented each function separately: initialize(), propagate(), optimize(). Then you built a model().
