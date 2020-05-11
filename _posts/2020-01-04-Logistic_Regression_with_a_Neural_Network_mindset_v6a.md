@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-# Logistic Regression with a Neural Network mindset
-=======
 ---
 layout:     post
 title:      Deep Learning Basics 1
@@ -15,8 +11,6 @@ tags:
     - Deep Learning
 ---
 
-# 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 Welcome to your first (required) programming assignment! You will build a logistic regression classifier to recognize  cats. This assignment will step you through how to do this with a Neural Network mindset, and so will also hone your intuitions about deep learning.
 
@@ -46,11 +40,8 @@ This notebook has been updated over the past few months.  The prior version was 
 * Plot's axis label now says "iterations (hundred)" instead of "iterations".
 * When testing the model, the test image is normalized by dividing by 255.
 
-<<<<<<< HEAD
-## 1 - Packages ##
-=======
 ## 1 - Packages 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
+
 
 First, let's run the cell below to import all the packages that you will need during this assignment. 
 - [numpy](www.numpy.org) is the fundamental package for scientific computing with Python.
@@ -71,11 +62,8 @@ from lr_utils import load_dataset
 %matplotlib inline
 ```
 
-<<<<<<< HEAD
-## 2 - Overview of the Problem set ##
-=======
 ## 2 - Overview of the Problem set 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
+
 
 **Problem Statement**: You are given a dataset ("data.h5") containing:
     - a training set of m_train images labeled as cat (y=1) or non-cat (y=0)
@@ -108,12 +96,9 @@ print ("y = " + str(train_set_y[:, index]) + ", it's a '" + classes[np.squeeze(t
 
 
 
-<<<<<<< HEAD
-![png](output_7_1.png)
-=======
 ![png](/img/courseradp/output_7_1.png)
 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
+
 
 
 Many software bugs in deep learning come from having matrix/vector dimensions that don't fit. If you can keep your matrix/vector dimensions straight you will go a long way toward eliminating many bugs. 
@@ -243,43 +228,28 @@ train_set_x = train_set_x_flatten/255.
 test_set_x = test_set_x_flatten/255.
 ```
 
-<font color='blue'>
 **What you need to remember:**
+
 
 Common steps for pre-processing a new dataset are:
 - Figure out the dimensions and shapes of the problem (m_train, m_test, num_px, ...)
 - Reshape the datasets such that each example is now a vector of size (num_px \* num_px \* 3, 1)
 - "Standardize" the data
 
-<<<<<<< HEAD
-## 3 - General Architecture of the learning algorithm ##
-=======
+
 ## 3  General Architecture of the learning algorithm 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
+
 
 It's time to design a simple algorithm to distinguish cat images from non-cat images.
 
 You will build a Logistic Regression, using a Neural Network mindset. The following Figure explains why **Logistic Regression is actually a very simple Neural Network!**
 
-<<<<<<< HEAD
-<img src="images/LogReg_kiank.png" style="width:650px;height:400px;">
-
-**Mathematical expression of the algorithm**:
-
-For one example $x^{(i)}$:
-$$z^{(i)} = w^T x^{(i)} + b \tag{1}$$
-$$\hat{y}^{(i)} = a^{(i)} = sigmoid(z^{(i)})\tag{2}$$ 
-$$ \mathcal{L}(a^{(i)}, y^{(i)}) =  - y^{(i)}  \log(a^{(i)}) - (1-y^{(i)} )  \log(1-a^{(i)})\tag{3}$$
-
-The cost is then computed by summing over all training examples:
-$$ J = \frac{1}{m} \sum_{i=1}^m \mathcal{L}(a^{(i)}, y^{(i)})\tag{6}$$
-=======
 ![](/img/courseradp/001.png)
 
+
 **Mathematical expression of the algorithm**:
 
 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 **Key steps**:
 In this exercise, you will carry out the following steps: 
@@ -288,11 +258,9 @@ In this exercise, you will carry out the following steps:
     - Use the learned parameters to make predictions (on the test set)
     - Analyse the results and conclude
 
-<<<<<<< HEAD
-## 4 - Building the parts of our algorithm ## 
-=======
+
 ## 4 - Building the parts of our algorithm 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
+
 
 The main steps for building a Neural Network are:
 1. Define the model structure (such as number of input features) 
@@ -414,17 +382,7 @@ Now that your parameters are initialized, you can do the "forward" and "backward
 
 **Exercise:** Implement a function `propagate()` that computes the cost function and its gradient.
 
-**Hints**:
-
-Forward Propagation:
-- You get X
-- You compute $A = \sigma(w^T X + b) = (a^{(1)}, a^{(2)}, ..., a^{(m-1)}, a^{(m)})$
-- You calculate the cost function: $J = -\frac{1}{m}\sum_{i=1}^{m}y^{(i)}\log(a^{(i)})+(1-y^{(i)})\log(1-a^{(i)})$
-
-Here are the two formulas you will be using: 
-
-$$ \frac{\partial J}{\partial w} = \frac{1}{m}X(A-Y)^T\tag{7}$$
-$$ \frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (a^{(i)}-y^{(i)})\tag{8}$$
+![](/img/courseradp/4.3.png)
 
 
 ```python
@@ -513,8 +471,7 @@ print ("cost = " + str(cost))
 - You are also able to compute a cost function and its gradient.
 - Now, you want to update the parameters using gradient descent.
 
-**Exercise:** Write down the optimization function. The goal is to learn $w$ and $b$ by minimizing the cost function $J$. For a parameter $\theta$, the update rule is $ \theta = \theta - \alpha \text{ } d\theta$, where $\alpha$ is the learning rate.
-
+![](/img/courseradp/4.3.png)
 
 ```python
 # GRADED FUNCTION: optimize
@@ -703,7 +660,7 @@ You've implemented several functions that:
     - updating the parameters using gradient descent
 - Use the learned (w,b) to predict the labels for a given set of examples
 
-## 5 - Merge all functions into a model ##
+## 5 - Merge all functions into a model 
 
 You will now see how the overall model is structured by putting together all the building blocks (functions implemented in the previous parts) together, in the right order.
 
@@ -840,7 +797,7 @@ print ("y = " + str(test_set_y[0,index]) + ", you predicted that it is a \"" + c
 
 
 
-![png](output_45_1.png)
+![png](/img/courseradp/output_45_1.png)
 
 
 Let's also plot the cost function and the gradients.
@@ -857,13 +814,13 @@ plt.show()
 ```
 
 
-![png](output_47_0.png)
+![png](/img/courseradp/output_47_0.png)
 
 
 **Interpretation**:
 You can see the cost decreasing. It shows that the parameters are being learned. However, you see that you could train the model even more on the training set. Try to increase the number of iterations in the cell above and rerun the cells. You might see that the training set accuracy goes up, but the test set accuracy goes down. This is called overfitting. 
 
-## 6 - Further analysis (optional/ungraded exercise) ##
+## 6 - Further analysis (optional/ungraded exercise) 
 
 Congratulations on building your first image classification model. Let's analyze it further, and examine possible choices for the learning rate $\alpha$. 
 
@@ -916,7 +873,7 @@ plt.show()
 
 
 
-![png](output_51_1.png)
+![png](/img/courseradp/output_51_1.png)
 
 
 **Interpretation**: 
@@ -928,7 +885,7 @@ plt.show()
     - If your model overfits, use other techniques to reduce overfitting. (We'll talk about this in later videos.) 
 
 
-## 7 - Test with your own image (optional/ungraded exercise) ##
+## 7 - Test with your own image (optional/ungraded exercise) 
 
 Congratulations on finishing this assignment. You can use your own image and see the output of your model. To do that:
     1. Click on "File" in the upper bar of this notebook, then click "Open" to go on your Coursera Hub.
