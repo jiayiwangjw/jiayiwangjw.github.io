@@ -228,8 +228,8 @@ train_set_x = train_set_x_flatten/255.
 test_set_x = test_set_x_flatten/255.
 ```
 
-<font color='blue'>
 **What you need to remember:**
+
 
 Common steps for pre-processing a new dataset are:
 - Figure out the dimensions and shapes of the problem (m_train, m_test, num_px, ...)
