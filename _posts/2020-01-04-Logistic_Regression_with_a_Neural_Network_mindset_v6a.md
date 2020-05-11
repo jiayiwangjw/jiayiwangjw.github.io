@@ -471,7 +471,7 @@ print ("cost = " + str(cost))
 - You are also able to compute a cost function and its gradient.
 - Now, you want to update the parameters using gradient descent.
 
-![](/img/courseradp/4.3.png)
+![](/img/courseradp/4.4.png)
 
 ```python
 # GRADED FUNCTION: optimize
@@ -652,6 +652,8 @@ print ("predictions = " + str(predict(w, b, X)))
 
 
 <font color='blue'>
+
+
 **What to remember:**
 You've implemented several functions that:
 - Initialize (w,b)
