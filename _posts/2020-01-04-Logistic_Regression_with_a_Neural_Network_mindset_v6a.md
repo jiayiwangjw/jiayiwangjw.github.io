@@ -109,8 +109,6 @@ print ("y = " + str(train_set_y[:, index]) + ", it's a '" + classes[np.squeeze(t
 
 
 <<<<<<< HEAD
-![png](output_7_1.png)
-=======
 ![png](/img/courseradp/output_7_1.png)
 
 >>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
@@ -251,35 +249,20 @@ Common steps for pre-processing a new dataset are:
 - Reshape the datasets such that each example is now a vector of size (num_px \* num_px \* 3, 1)
 - "Standardize" the data
 
-<<<<<<< HEAD
-## 3 - General Architecture of the learning algorithm ##
-=======
+
 ## 3  General Architecture of the learning algorithm 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
+
 
 It's time to design a simple algorithm to distinguish cat images from non-cat images.
 
 You will build a Logistic Regression, using a Neural Network mindset. The following Figure explains why **Logistic Regression is actually a very simple Neural Network!**
 
-<<<<<<< HEAD
-<img src="images/LogReg_kiank.png" style="width:650px;height:400px;">
-
-**Mathematical expression of the algorithm**:
-
-For one example $x^{(i)}$:
-$$z^{(i)} = w^T x^{(i)} + b \tag{1}$$
-$$\hat{y}^{(i)} = a^{(i)} = sigmoid(z^{(i)})\tag{2}$$ 
-$$ \mathcal{L}(a^{(i)}, y^{(i)}) =  - y^{(i)}  \log(a^{(i)}) - (1-y^{(i)} )  \log(1-a^{(i)})\tag{3}$$
-
-The cost is then computed by summing over all training examples:
-$$ J = \frac{1}{m} \sum_{i=1}^m \mathcal{L}(a^{(i)}, y^{(i)})\tag{6}$$
-=======
 ![](/img/courseradp/001.png)
 
+
 **Mathematical expression of the algorithm**:
 
 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 **Key steps**:
 In this exercise, you will carry out the following steps: 
@@ -288,11 +271,9 @@ In this exercise, you will carry out the following steps:
     - Use the learned parameters to make predictions (on the test set)
     - Analyse the results and conclude
 
-<<<<<<< HEAD
-## 4 - Building the parts of our algorithm ## 
-=======
+
 ## 4 - Building the parts of our algorithm 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
+
 
 The main steps for building a Neural Network are:
 1. Define the model structure (such as number of input features) 
@@ -703,7 +684,7 @@ You've implemented several functions that:
     - updating the parameters using gradient descent
 - Use the learned (w,b) to predict the labels for a given set of examples
 
-## 5 - Merge all functions into a model ##
+## 5 - Merge all functions into a model 
 
 You will now see how the overall model is structured by putting together all the building blocks (functions implemented in the previous parts) together, in the right order.
 
@@ -840,7 +821,7 @@ print ("y = " + str(test_set_y[0,index]) + ", you predicted that it is a \"" + c
 
 
 
-![png](output_45_1.png)
+![png](/img/courseradp/output_45_1.png)
 
 
 Let's also plot the cost function and the gradients.
@@ -857,13 +838,13 @@ plt.show()
 ```
 
 
-![png](output_47_0.png)
+![png](/img/courseradp/output_47_0.png)
 
 
 **Interpretation**:
 You can see the cost decreasing. It shows that the parameters are being learned. However, you see that you could train the model even more on the training set. Try to increase the number of iterations in the cell above and rerun the cells. You might see that the training set accuracy goes up, but the test set accuracy goes down. This is called overfitting. 
 
-## 6 - Further analysis (optional/ungraded exercise) ##
+## 6 - Further analysis (optional/ungraded exercise) 
 
 Congratulations on building your first image classification model. Let's analyze it further, and examine possible choices for the learning rate $\alpha$. 
 
@@ -916,7 +897,7 @@ plt.show()
 
 
 
-![png](output_51_1.png)
+![png](/img/courseradp/output_51_1.png)
 
 
 **Interpretation**: 
@@ -928,7 +909,7 @@ plt.show()
     - If your model overfits, use other techniques to reduce overfitting. (We'll talk about this in later videos.) 
 
 
-## 7 - Test with your own image (optional/ungraded exercise) ##
+## 7 - Test with your own image (optional/ungraded exercise) 
 
 Congratulations on finishing this assignment. You can use your own image and see the output of your model. To do that:
     1. Click on "File" in the upper bar of this notebook, then click "Open" to go on your Coursera Hub.
