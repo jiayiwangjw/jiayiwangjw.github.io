@@ -382,17 +382,7 @@ Now that your parameters are initialized, you can do the "forward" and "backward
 
 **Exercise:** Implement a function `propagate()` that computes the cost function and its gradient.
 
-**Hints**:
-
-Forward Propagation:
-- You get X
-- You compute $A = \sigma(w^T X + b) = (a^{(1)}, a^{(2)}, ..., a^{(m-1)}, a^{(m)})$
-- You calculate the cost function: $J = -\frac{1}{m}\sum_{i=1}^{m}y^{(i)}\log(a^{(i)})+(1-y^{(i)})\log(1-a^{(i)})$
-
-Here are the two formulas you will be using: 
-
-$$ \frac{\partial J}{\partial w} = \frac{1}{m}X(A-Y)^T\tag{7}$$
-$$ \frac{\partial J}{\partial b} = \frac{1}{m} \sum_{i=1}^m (a^{(i)}-y^{(i)})\tag{8}$$
+![](/img/courseradp/4.3.png)
 
 
 ```python
@@ -481,8 +471,7 @@ print ("cost = " + str(cost))
 - You are also able to compute a cost function and its gradient.
 - Now, you want to update the parameters using gradient descent.
 
-**Exercise:** Write down the optimization function. The goal is to learn $w$ and $b$ by minimizing the cost function $J$. For a parameter $\theta$, the update rule is $ \theta = \theta - \alpha \text{ } d\theta$, where $\alpha$ is the learning rate.
-
+![](/img/courseradp/4.3.png)
 
 ```python
 # GRADED FUNCTION: optimize
