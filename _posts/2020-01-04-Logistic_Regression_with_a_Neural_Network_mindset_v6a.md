@@ -41,7 +41,7 @@ This notebook has been updated over the past few months.  The prior version was 
 * Plot's axis label now says "iterations (hundred)" instead of "iterations".
 * When testing the model, the test image is normalized by dividing by 255.
 
-## 1 - Packages ##
+## 1 - Packages 
 
 First, let's run the cell below to import all the packages that you will need during this assignment. 
 - [numpy](www.numpy.org) is the fundamental package for scientific computing with Python.
@@ -62,7 +62,7 @@ from lr_utils import load_dataset
 %matplotlib inline
 ```
 
-## 2 - Overview of the Problem set ##
+## 2 - Overview of the Problem set 
 
 **Problem Statement**: You are given a dataset ("data.h5") containing:
     - a training set of m_train images labeled as cat (y=1) or non-cat (y=0)
@@ -233,7 +233,7 @@ Common steps for pre-processing a new dataset are:
 - Reshape the datasets such that each example is now a vector of size (num_px \* num_px \* 3, 1)
 - "Standardize" the data
 
-## 3 - General Architecture of the learning algorithm ##
+## 3  General Architecture of the learning algorithm 
 
 It's time to design a simple algorithm to distinguish cat images from non-cat images.
 
@@ -258,7 +258,7 @@ In this exercise, you will carry out the following steps:
     - Use the learned parameters to make predictions (on the test set)
     - Analyse the results and conclude
 
-## 4 - Building the parts of our algorithm ## 
+## 4 - Building the parts of our algorithm 
 
 The main steps for building a Neural Network are:
 1. Define the model structure (such as number of input features) 
