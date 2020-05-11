@@ -650,11 +650,12 @@ print ("predictions = " + str(predict(w, b, X)))
 
 </table>
 
-
+<font color='blue'>
 
 
 
 **What to remember:**
+
 You've implemented several functions that:
 - Initialize (w,b)
 - Optimize the loss iteratively to learn parameters (w,b):
