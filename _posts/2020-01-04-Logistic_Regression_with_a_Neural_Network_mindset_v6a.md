@@ -95,7 +95,7 @@ print ("y = " + str(train_set_y[:, index]) + ", it's a '" + classes[np.squeeze(t
 
 
 
-![png](output_7_1.png)
+![png](/img/courseradp/output_7_1.png)
 
 
 Many software bugs in deep learning come from having matrix/vector dimensions that don't fit. If you can keep your matrix/vector dimensions straight you will go a long way toward eliminating many bugs. 
@@ -243,13 +243,7 @@ You will build a Logistic Regression, using a Neural Network mindset. The follow
 
 **Mathematical expression of the algorithm**:
 
-For one example $x^{(i)}$:
-$$z^{(i)} = w^T x^{(i)} + b \tag{1}$$
-$$\hat{y}^{(i)} = a^{(i)} = sigmoid(z^{(i)})\tag{2}$$ 
-$$ \mathcal{L}(a^{(i)}, y^{(i)}) =  - y^{(i)}  \log(a^{(i)}) - (1-y^{(i)} )  \log(1-a^{(i)})\tag{3}$$
-
-The cost is then computed by summing over all training examples:
-$$ J = \frac{1}{m} \sum_{i=1}^m \mathcal{L}(a^{(i)}, y^{(i)})\tag{6}$$
+![png](/img/courseradp/001.png)
 
 **Key steps**:
 In this exercise, you will carry out the following steps: 
