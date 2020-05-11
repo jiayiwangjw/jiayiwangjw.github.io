@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-# Logistic Regression with a Neural Network mindset
-=======
 ---
 layout:     post
 title:      Deep Learning Basics 1
@@ -15,8 +11,6 @@ tags:
     - Deep Learning
 ---
 
-# 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 Welcome to your first (required) programming assignment! You will build a logistic regression classifier to recognize  cats. This assignment will step you through how to do this with a Neural Network mindset, and so will also hone your intuitions about deep learning.
 
@@ -46,9 +40,6 @@ This notebook has been updated over the past few months.  The prior version was 
 * Plot's axis label now says "iterations (hundred)" instead of "iterations".
 * When testing the model, the test image is normalized by dividing by 255.
 
-<<<<<<< HEAD
-## 1 - Packages ##
-=======
 ## 1 - Packages 
 >>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
@@ -71,11 +62,8 @@ from lr_utils import load_dataset
 %matplotlib inline
 ```
 
-<<<<<<< HEAD
-## 2 - Overview of the Problem set ##
-=======
 ## 2 - Overview of the Problem set 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
+
 
 **Problem Statement**: You are given a dataset ("data.h5") containing:
     - a training set of m_train images labeled as cat (y=1) or non-cat (y=0)
@@ -108,10 +96,9 @@ print ("y = " + str(train_set_y[:, index]) + ", it's a '" + classes[np.squeeze(t
 
 
 
-<<<<<<< HEAD
 ![png](/img/courseradp/output_7_1.png)
 
->>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
+
 
 
 Many software bugs in deep learning come from having matrix/vector dimensions that don't fit. If you can keep your matrix/vector dimensions straight you will go a long way toward eliminating many bugs. 
