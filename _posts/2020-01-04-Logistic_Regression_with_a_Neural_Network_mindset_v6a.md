@@ -274,7 +274,7 @@ You often build 1-3 separately and integrate them into one function we call `mod
 
 ### 4.1 - Helper functions
 
-**Exercise**: Using your code from "Python Basics", implement `sigmoid()`. As you've seen in the figure above, you need to compute $sigmoid( w^T x + b) = \frac{1}{1 + e^{-(w^T x + b)}}$ to make predictions. Use np.exp().
+![](/img/courseradp/4.1.png)
 
 
 ```python
@@ -909,7 +909,6 @@ plt.imshow(image)
 print("y = " + str(np.squeeze(my_predicted_image)) + ", your algorithm predicts a \"" + classes[int(np.squeeze(my_predicted_image)),].decode("utf-8") +  "\" picture.")
 ```
 
-<font color='blue'>
 
 **What to remember from this assignment:**
 1. Preprocessing the dataset is important.
