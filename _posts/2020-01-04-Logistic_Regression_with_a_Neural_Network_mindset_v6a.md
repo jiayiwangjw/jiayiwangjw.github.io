@@ -98,6 +98,7 @@ print ("y = " + str(train_set_y[:, index]) + ", it's a '" + classes[np.squeeze(t
 ![png](/img/courseradp/output_7_1.png)
 
 
+
 Many software bugs in deep learning come from having matrix/vector dimensions that don't fit. If you can keep your matrix/vector dimensions straight you will go a long way toward eliminating many bugs. 
 
 **Exercise:** Find the values for:
