@@ -652,17 +652,16 @@ print ("predictions = " + str(predict(w, b, X)))
 
 <font color='blue'>
 
-
+test
 
 **What to remember**:
-
-
 You've implemented several functions that:
 - Initialize (w,b)
 - Optimize the loss iteratively to learn parameters (w,b):
     - computing the cost and its gradient 
     - updating the parameters using gradient descent
 - Use the learned (w,b) to predict the labels for a given set of examples
+
 
 ## 5 - Merge all functions into a model 
 
