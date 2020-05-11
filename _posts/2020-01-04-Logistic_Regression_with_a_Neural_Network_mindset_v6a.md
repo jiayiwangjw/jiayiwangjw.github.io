@@ -1,5 +1,22 @@
+<<<<<<< HEAD
 
 # Logistic Regression with a Neural Network mindset
+=======
+---
+layout:     post
+title:      Deep Learning Basics 1
+subtitle:   Logistic Regression with a Neural Network mindset
+date:       2020-01-04
+author:     Jiayi
+header-img: img/post-bg-ios10.jpg
+catalog: true
+tags:
+    - Logistic Regression
+    - Deep Learning
+---
+
+# 
+>>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 Welcome to your first (required) programming assignment! You will build a logistic regression classifier to recognize  cats. This assignment will step you through how to do this with a Neural Network mindset, and so will also hone your intuitions about deep learning.
 
@@ -29,7 +46,11 @@ This notebook has been updated over the past few months.  The prior version was 
 * Plot's axis label now says "iterations (hundred)" instead of "iterations".
 * When testing the model, the test image is normalized by dividing by 255.
 
+<<<<<<< HEAD
 ## 1 - Packages ##
+=======
+## 1 - Packages 
+>>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 First, let's run the cell below to import all the packages that you will need during this assignment. 
 - [numpy](www.numpy.org) is the fundamental package for scientific computing with Python.
@@ -50,7 +71,11 @@ from lr_utils import load_dataset
 %matplotlib inline
 ```
 
+<<<<<<< HEAD
 ## 2 - Overview of the Problem set ##
+=======
+## 2 - Overview of the Problem set 
+>>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 **Problem Statement**: You are given a dataset ("data.h5") containing:
     - a training set of m_train images labeled as cat (y=1) or non-cat (y=0)
@@ -83,7 +108,12 @@ print ("y = " + str(train_set_y[:, index]) + ", it's a '" + classes[np.squeeze(t
 
 
 
+<<<<<<< HEAD
 ![png](output_7_1.png)
+=======
+![png](/img/courseradp/output_7_1.png)
+
+>>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 
 Many software bugs in deep learning come from having matrix/vector dimensions that don't fit. If you can keep your matrix/vector dimensions straight you will go a long way toward eliminating many bugs. 
@@ -221,12 +251,17 @@ Common steps for pre-processing a new dataset are:
 - Reshape the datasets such that each example is now a vector of size (num_px \* num_px \* 3, 1)
 - "Standardize" the data
 
+<<<<<<< HEAD
 ## 3 - General Architecture of the learning algorithm ##
+=======
+## 3  General Architecture of the learning algorithm 
+>>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 It's time to design a simple algorithm to distinguish cat images from non-cat images.
 
 You will build a Logistic Regression, using a Neural Network mindset. The following Figure explains why **Logistic Regression is actually a very simple Neural Network!**
 
+<<<<<<< HEAD
 <img src="images/LogReg_kiank.png" style="width:650px;height:400px;">
 
 **Mathematical expression of the algorithm**:
@@ -238,6 +273,13 @@ $$ \mathcal{L}(a^{(i)}, y^{(i)}) =  - y^{(i)}  \log(a^{(i)}) - (1-y^{(i)} )  \lo
 
 The cost is then computed by summing over all training examples:
 $$ J = \frac{1}{m} \sum_{i=1}^m \mathcal{L}(a^{(i)}, y^{(i)})\tag{6}$$
+=======
+![](/img/courseradp/001.png)
+
+**Mathematical expression of the algorithm**:
+
+
+>>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 **Key steps**:
 In this exercise, you will carry out the following steps: 
@@ -246,7 +288,11 @@ In this exercise, you will carry out the following steps:
     - Use the learned parameters to make predictions (on the test set)
     - Analyse the results and conclude
 
+<<<<<<< HEAD
 ## 4 - Building the parts of our algorithm ## 
+=======
+## 4 - Building the parts of our algorithm 
+>>>>>>> 65a2c6f474f09e74a9e1f190d8bbd17c5775d87e
 
 The main steps for building a Neural Network are:
 1. Define the model structure (such as number of input features) 

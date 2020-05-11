@@ -12,6 +12,8 @@ tags:
 ---
 
 
+
+
 ## Clustering via  𝑘 means
 In many applications, the data have no labels but we wish to discover possible labels (or other hidden patterns or structures). This problem is one of unsupervised learning. How can we approach such problems?
 
@@ -35,9 +37,7 @@ One way to measure the quality of a set of clusters: For each cluster  𝐶 , co
 
 More formally, given a clustering $C = \{C_0, C_1, \ldots, C_{k-1}\}$, let
 
-$$
-  \mathrm{WCSS}(C) \equiv \sum_{i=0}^{k-1} \sum_{x\in C_i} \|x - \mu_i\|^2,
-$$
+$$ \mathrm{WCSS}(C) \equiv \sum_{i=0}^{k-1} \sum_{x\in C_i} \|x - \mu_i\|^2, $$
 
 where $\mu_i$ is the center of $C_i$. This center may be computed simply as the mean of all points in $C_i$, i.e.,
 
