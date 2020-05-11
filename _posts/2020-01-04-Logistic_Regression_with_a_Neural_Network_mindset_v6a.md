@@ -651,7 +651,7 @@ print ("predictions = " + str(predict(w, b, X)))
 </table>
 
 
-<font color='blue'>
+
 
 
 **What to remember:**
